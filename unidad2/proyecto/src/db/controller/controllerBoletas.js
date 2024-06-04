@@ -1,22 +1,22 @@
-const { resolve } = require('path');
 const db = require('../conexion.js');
-const { error } = require('console');
 
-const TABLA = "empleados";
+const TABLA = "boletas";
 
-function insertEmpleados(body) {
+function insertBoletas(body) {
     return new Promise((resolve, reject) => {
-            db.query(`INSERT INTO ${TABLA} SET ?`, body, (error,resultado) => {
-                if (error) {
-                    return reject(error);
-                }
-                return resolve(resultado);
-                console.log(query);
-            });
-    });
-        }
 
-function obtenerTodosEmpleados() {
+        db.query(`INSERT INTO ${TABLA} SET ?`, body, (error,resultado) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(resultado);
+            console.log(query);
+        });
+        
+    });
+}
+
+function obtenerTodosBoletas() {
     return new Promise((resolve, reject) => {
         db.query(`SELECT * FROM ${TABLA}`, (error, resultado) =>{
             return error ? reject(error) : resolve(resultado);
@@ -24,7 +24,7 @@ function obtenerTodosEmpleados() {
     });
 }
 
-function getUnoEmpleados(id) {
+function getUnoBoletas(id) {
     return new Promise((resolve, reject) => {
         db.query(`SELECT * FROM ${TABLA}  WHERE id = ${id}`, (error, resultado) => {
             return error ? reject(error) : resolve(resultado);
@@ -32,7 +32,7 @@ function getUnoEmpleados(id) {
     });
 }
 
-function updateEmpleados(id, data) {
+function updateBoletas(id, data) {
     return new Promise((resolve, reject) => {
         const query = `UPDATE ${TABLA} SET ? WHERE id = ?`;
         db.query(query, [data, id], (error, resultado) => {
@@ -44,7 +44,7 @@ function updateEmpleados(id, data) {
     });
 }
 
-function deleteEmpleados(id) {
+function deleteBoletas(id) {
     return new Promise((resolve, reject) => {
         const query = `DELETE FROM ${TABLA} WHERE id = ?`;
         db.query(query, [id], (error, resultado) => {
@@ -56,4 +56,4 @@ function deleteEmpleados(id) {
     });
 }
 
-module.exports = { obtenerTodosEmpleados, insertEmpleados, getUnoEmpleados, updateEmpleados, deleteEmpleados };
+module.exports = { obtenerTodosBoletas, insertBoletas, getUnoBoletas, updateBoletas, deleteBoletas };

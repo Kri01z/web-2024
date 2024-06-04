@@ -2,7 +2,6 @@ const db = require('../conexion.js');
 
 const TABLA = "clientes";
 
-//falta saber como funciona
 function insertClientes(body) {
     return new Promise((resolve, reject) => {
 
@@ -33,7 +32,6 @@ function getUnoClientes(id) {
     });
 }
 
-//falta saber como funciona
 function updateClientes(id, data) {
     return new Promise((resolve, reject) => {
         const query = `UPDATE ${TABLA} SET ? WHERE id = ?`;

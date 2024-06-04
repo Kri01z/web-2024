@@ -1,5 +1,4 @@
 const { Router } = require('express');
-//const res = require('../../res/response.js');
 const controllerClientes = require('../db/controller/controllerClientes.js');
 
 const ruta = Router();
