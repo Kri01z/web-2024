@@ -1,0 +1,2 @@
+una web es una aplicacion que interactua entre el usuario y un servidor
+
