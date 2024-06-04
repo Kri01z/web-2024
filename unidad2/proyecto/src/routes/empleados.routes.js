@@ -1,5 +1,5 @@
 const { Router, query } = require('express');
-const controllerEmpleados = require('../../db/controller/controllerEmpleados.js');
+const controllerEmpleados = require('../db/controller/controllerEmpleados.js');
 
 const ruta = Router();
 

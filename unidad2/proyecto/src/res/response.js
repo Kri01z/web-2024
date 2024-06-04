@@ -13,3 +13,6 @@ exports.error = function (res, res, msg = 'Error interno', status = 500){
         body: msg
     });
 }
+
+
+
