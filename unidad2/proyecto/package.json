@@ -1,10 +1,10 @@
 {
-  "name": "web_saul_galleguillos",
-  "version": "1.0.0",
+  "name": "cristopher_sanchez",
+  "version": "1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
