@@ -6,6 +6,7 @@ const config = require('./config/config.js');
 
 const app = express();
 
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.set('view engine', 'ejs');

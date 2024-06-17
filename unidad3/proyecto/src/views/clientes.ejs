@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<%- include('partials/head.ejs') %>
+
+<body>
+    
+    <%- include('partials/navBar.ejs') %>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Teléfono</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>villa La Calera</td>
+            <td>2003-02-11</td>
+            <td>12345678</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Markos</td>
+            <td>Copil-Otto</td>
+            <td>Departamento 15</td>
+            <td>2005-05-13</td>
+            <td>123456789</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <a href="/clientesInsert">INSERTAR</a>
+      <a href="">ACTUALIZAR</a>
+      <a href="">BORRAR
+      </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"  ></script>
+</body>
+<%- include('partials/footer.ejs') %>
+</html>

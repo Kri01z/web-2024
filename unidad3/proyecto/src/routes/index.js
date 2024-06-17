@@ -15,11 +15,36 @@ router.get('/', (req, res) => {
     res.render('home', {titulo})
 })
 router.get('/about', (req, res) => {
-    console.log(req.body.nombre)
-    res.render('about')
+    const titulo = "Integrantes";
+    res.render('about', {titulo})
 })
 
+router.get('/clientesIndex', (req, res) => {
+    const titulo = "Clientes";
+    res.render('clientes', {titulo})
+})
+router.get('/clientesInsert', (req, res) => {
+    const titulo = "Clientes Insertar";
+    res.render('clientesIndex/clientesInsertar', {titulo})
+})
 
+router.get('/productosIndex', (req, res) => {
+    const titulo = "Productos";
+    res.render('productos', {titulo})
+})
+router.get('/productosInsert', (req, res) => {
+    const titulo = "Productos Insertar";
+    res.render('productosIndex/productosInsertar', {titulo})
+})
+
+router.get('/empleadosIndex', (req, res) => {
+    const titulo = "Empleados";
+    res.render('empleados', {titulo})
+})
+router.get('/empleadosInsert', (req, res) => {
+    const titulo = "Empleados Insertar";
+    res.render('empleadosIndex/empleadosInsertar', {titulo})
+})
 
 
 module.exports = router;
